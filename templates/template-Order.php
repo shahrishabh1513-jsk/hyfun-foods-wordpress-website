@@ -1,0 +1,851 @@
+<?php
+/**
+	* This file controls the layout of your homepage
+	*
+	* @package asteriki
+	* Template Name: Order Now 
+*/
+
+get_header(); ?>
+
+<!-- Animated Background -->
+    <div class="animated-bg">
+        <div class="gradient-sphere"></div>
+        <div class="gradient-sphere-2"></div>
+        <div class="floating-shapes">
+            <div class="shape"></div>
+            <div class="shape"></div>
+            <div class="shape"></div>
+            <div class="shape"></div>
+        </div>
+    </div>
+
+    <!-- Sticky Header -->
+    <header class="modern-header">
+        <div class="header-container">
+            <div class="header-left">
+                <a href="index.html" class="logo-wrapper">
+                    <img src="./assets/image/hyfun_logo.png" alt="HyFun Foods" class="logo-img">
+                </a>
+            </div>
+            
+            <div class="header-right">
+                <div class="user-profile" id="userProfile">
+                    <div class="user-avatar">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                    <span class="user-name" id="userName">Guest</span>
+                </div>
+                
+                <div class="cart-preview" id="cartPreview">
+                    <button class="cart-btn" id="cartToggle">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span class="cart-badge" id="cartCount">0</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+        <!-- SECTION 1: Hero Landing -->
+        <section id="section-hero" class="content-section active">
+            <div class="hero-modern">
+                <div class="hero-content-wrapper">
+                    <div class="hero-badge">
+                        <span class="badge-pulse">🔥 Fresh & Crispy</span>
+                    </div>
+                    <h1 class="hero-title-modern">
+                        <span class="title-line">Delicious Potato</span>
+                        <span class="title-line highlight">Snacks Delivered</span>
+                    </h1>
+                    <p class="hero-description">
+                        Experience the crunch of perfectly prepared potato snacks, 
+                        made from the finest ingredients and delivered to your doorstep
+                    </p>
+                    
+                    <div class="hero-stats-modern">
+                        <div class="stat-item">
+                            <i class="fas fa-clock"></i>
+                            <div class="stat-info">
+                                <span class="stat-value">30-45</span>
+                                <span class="stat-label">min delivery</span>
+                            </div>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fas fa-leaf"></i>
+                            <div class="stat-info">
+                                <span class="stat-value">100%</span>
+                                <span class="stat-label">Vegetarian</span>
+                            </div>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fas fa-star"></i>
+                            <div class="stat-info">
+                                <span class="stat-value">4.8</span>
+                                <span class="stat-label">Rating</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button class="btn-start-order" id="startOrderBtn">
+                        <span>Start Ordering</span>
+                        <i class="fas fa-arrow-right"></i>
+                        <div class="btn-glow"></div>
+                    </button>
+                    
+                    <div class="trust-badges">
+                        <div class="trust-item">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Secure Payment</span>
+                        </div>
+                        <div class="trust-item">
+                            <i class="fas fa-truck"></i>
+                            <span>Free Delivery</span>
+                        </div>
+                        <div class="trust-item">
+                            <i class="fas fa-undo-alt"></i>
+                            <span>Easy Returns</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="hero-visual">
+                    <div class="floating-card card-1">
+                        <img src="./assets/image/french_fries.png" alt="French Fries">
+                    </div>
+                    <div class="floating-card card-2">
+                        <img src="./assets/image/Potato Wedges.png" alt="Potato Wedges">
+                    </div>
+                    <div class="floating-card card-3">
+                        <img src="./assets/image/Aloo_Tikki.png" alt="Aloo Tikki">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2: Authentication -->
+        <section id="section-auth" class="content-section">
+            <div class="auth-modern">
+                <div class="auth-header">
+                    <h2>Welcome Back!</h2>
+                    <p>Sign in to continue your food journey</p>
+                </div>
+                
+                <div class="auth-tabs-modern">
+                    <button class="auth-tab-btn active" data-tab="login">Login</button>
+                    <button class="auth-tab-btn" data-tab="signup">Sign Up</button>
+                </div>
+                
+                <!-- Login Form -->
+                <div class="auth-form-container active" id="loginFormContainer">
+                    <form id="loginForm">
+                        <div class="input-group-modern">
+                            <i class="fas fa-envelope"></i>
+                            <input type="text" id="loginEmail" placeholder="Email or Phone" required>
+                            <div class="input-focus-effect"></div>
+                        </div>
+                        
+                        <div class="input-group-modern">
+                            <i class="fas fa-lock"></i>
+                            <input type="password" id="loginPassword" placeholder="Password" required>
+                            <button type="button" class="password-toggle">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                            <div class="input-focus-effect"></div>
+                        </div>
+                        
+                        <div class="form-options">
+                            <label class="checkbox-modern">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                                Remember me
+                            </label>
+                            <a href="#" class="forgot-link">Forgot Password?</a>
+                        </div>
+                        
+                        <button type="submit" class="btn-auth-modern">
+                            <span>Login</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </form>
+                    
+                    <div class="auth-divider-modern">
+                        <span>or continue with</span>
+                    </div>
+                    
+                    <div class="social-login">
+                        <button class="social-btn google">
+                            <i class="fab fa-google"></i>
+                            <span>Google</span>
+                        </button>
+                        <button class="social-btn facebook">
+                            <i class="fab fa-facebook-f"></i>
+                            <span>Facebook</span>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Signup Form -->
+                <div class="auth-form-container" id="signupFormContainer">
+                    <form id="signupForm">
+                        <div class="input-group-modern">
+                            <i class="fas fa-user"></i>
+                            <input type="text" id="signupName" placeholder="Full Name" required>
+                            <div class="input-focus-effect"></div>
+                        </div>
+                        
+                        <div class="input-group-modern">
+                            <i class="fas fa-envelope"></i>
+                            <input type="email" id="signupEmail" placeholder="Email Address" required>
+                            <div class="input-focus-effect"></div>
+                        </div>
+                        
+                        <div class="input-group-modern">
+                            <i class="fas fa-phone-alt"></i>
+                            <input type="tel" id="signupPhone" placeholder="Phone Number" required>
+                            <div class="input-focus-effect"></div>
+                        </div>
+                        
+                        <div class="input-group-modern">
+                            <i class="fas fa-lock"></i>
+                            <input type="password" id="signupPassword" placeholder="Password" required minlength="6">
+                            <button type="button" class="password-toggle">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                            <div class="input-focus-effect"></div>
+                        </div>
+                        
+                        <div class="input-group-modern">
+                            <i class="fas fa-lock"></i>
+                            <input type="password" id="confirmPassword" placeholder="Confirm Password" required>
+                            <button type="button" class="password-toggle">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                            <div class="input-focus-effect"></div>
+                        </div>
+                        
+                        <div class="terms-checkbox">
+                            <label class="checkbox-modern">
+                                <input type="checkbox" required>
+                                <span class="checkmark"></span>
+                                I agree to the <a href="#">Terms & Conditions</a>
+                            </label>
+                        </div>
+                        
+                        <button type="submit" class="btn-auth-modern">
+                            <span>Create Account</span>
+                            <i class="fas fa-user-plus"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: Products Menu -->
+        <section id="section-products" class="content-section">
+            <div class="products-modern">
+                <div class="products-header-modern">
+                    <div class="header-left">
+                        <h2>Our Delicious <span>Menu</span></h2>
+                        <p>Choose from our wide variety of crispy snacks</p>
+                    </div>
+                    
+                    <div class="header-right">
+                        <div class="search-box-modern">
+                            <i class="fas fa-search"></i>
+                            <input type="text" id="searchProducts" placeholder="Search snacks...">
+                        </div>
+                        
+                        <div class="filter-dropdown">
+                            <button class="filter-btn" id="filterBtn">
+                                <i class="fas fa-filter"></i>
+                                Filter
+                            </button>
+                            <div class="filter-menu" id="filterMenu">
+                                <div class="filter-option" data-filter="all">
+                                    <i class="fas fa-th-large"></i> All Items
+                                </div>
+                                <div class="filter-option" data-filter="popular">
+                                    <i class="fas fa-fire"></i> Popular
+                                </div>
+                                <div class="filter-option" data-filter="veg">
+                                    <i class="fas fa-leaf"></i> Veggie
+                                </div>
+                                <div class="filter-option" data-filter="new">
+                                    <i class="fas fa-star"></i> New Arrivals
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="category-scroll">
+                    <button class="category-chip active" data-category="all">
+                        <i class="fas fa-utensils"></i> All
+                    </button>
+                    <button class="category-chip" data-category="french-fries">
+                        <i class="fas fa-french-fries"></i> French Fries
+                    </button>
+                    <button class="category-chip" data-category="potato-specialties">
+                        <i class="fas fa-potato"></i> Potato Specials
+                    </button>
+                    <button class="category-chip" data-category="veggie-specialties">
+                        <i class="fas fa-carrot"></i> Veggie
+                    </button>
+                    <button class="category-chip" data-category="indian-ethnic">
+                        <i class="fas fa-flag"></i> Indian
+                    </button>
+                    <button class="category-chip" data-category="baked-snacks">
+                        <i class="fas fa-bread-slice"></i> Baked
+                    </button>
+                </div>
+                
+                <div class="products-grid-modern" id="productsGrid"></div>
+            </div>
+        </section>
+
+        <!-- SECTION 4: Delivery Details -->
+        <section id="section-details" class="content-section">
+            <div class="details-modern">
+                <div class="details-header">
+                    <h2>Delivery <span>Details</span></h2>
+                    <p>Where should we deliver your delicious order?</p>
+                </div>
+                
+                <form id="deliveryForm" class="delivery-form">
+                    <div class="form-grid">
+                        <div class="form-field">
+                            <label>Full Name *</label>
+                            <div class="field-input">
+                                <i class="fas fa-user"></i>
+                                <input type="text" id="fullName" placeholder="John Doe" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-field">
+                            <label>Phone Number *</label>
+                            <div class="field-input">
+                                <i class="fas fa-phone-alt"></i>
+                                <input type="tel" id="phoneNumber" placeholder="9876543210" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-field full-width">
+                            <label>Email Address *</label>
+                            <div class="field-input">
+                                <i class="fas fa-envelope"></i>
+                                <input type="email" id="email" placeholder="john@example.com" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-field full-width">
+                            <label>Delivery Address *</label>
+                            <div class="field-input">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <textarea id="address" rows="3" placeholder="House/Flat No., Street, Area" required></textarea>
+                            </div>
+                        </div>
+                        
+                        <div class="form-field">
+                            <label>Landmark</label>
+                            <div class="field-input">
+                                <i class="fas fa-flag"></i>
+                                <input type="text" id="landmark" placeholder="Nearby landmark">
+                            </div>
+                        </div>
+                        
+                        <div class="form-field">
+                            <label>City *</label>
+                            <div class="field-input">
+                                <i class="fas fa-city"></i>
+                                <input type="text" id="city" placeholder="Mumbai" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-field">
+                            <label>Pin Code *</label>
+                            <div class="field-input">
+                                <i class="fas fa-map-pin"></i>
+                                <input type="text" id="pincode" placeholder="400001" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-field">
+                            <label>Preferred Time</label>
+                            <div class="field-input">
+                                <i class="fas fa-clock"></i>
+                                <select id="deliveryTime">
+                                    <option value="asap">ASAP (30-45 min)</option>
+                                    <option value="1hr">Within 1 hour</option>
+                                    <option value="2hr">Within 2 hours</option>
+                                    <option value="specific">Schedule for later</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-actions-modern">
+                        <button type="button" class="btn-secondary" onclick="loadSection('products')">
+                            <i class="fas fa-arrow-left"></i> Back to Menu
+                        </button>
+                        <button type="submit" class="btn-primary">
+                            Proceed to Payment <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <!-- SECTION 5: Payment -->
+        <section id="section-payment" class="content-section">
+            <div class="payment-modern">
+                <div class="payment-grid">
+                    <!-- Order Summary Card -->
+                    <div class="summary-card">
+                        <div class="card-header">
+                            <i class="fas fa-receipt"></i>
+                            <h3>Order Summary</h3>
+                        </div>
+                        
+                        <div class="summary-items" id="paymentSummaryItems">
+                            <!-- Items will be loaded here -->
+                        </div>
+                        
+                        <div class="summary-breakdown">
+                            <div class="breakdown-row">
+                                <span>Subtotal</span>
+                                <span id="subtotal">₹0</span>
+                            </div>
+                            <div class="breakdown-row">
+                                <span>Delivery Fee</span>
+                                <span>₹40</span>
+                            </div>
+                            <div class="breakdown-row">
+                                <span>Tax (5%)</span>
+                                <span id="taxAmount">₹0</span>
+                            </div>
+                            <div class="breakdown-row total">
+                                <span>Total</span>
+                                <span id="totalAmount">₹0</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Payment Methods Card -->
+                    <div class="payment-card">
+                        <div class="card-header">
+                            <i class="fas fa-credit-card"></i>
+                            <h3>Payment Method</h3>
+                        </div>
+                        
+                        <div class="payment-methods-grid">
+                            <div class="method-card active" data-method="card">
+                                <div class="method-icon">
+                                    <i class="fas fa-credit-card"></i>
+                                </div>
+                                <span>Card</span>
+                                <div class="method-check"></div>
+                            </div>
+                            
+                            <div class="method-card" data-method="upi">
+                                <div class="method-icon">
+                                    <i class="fas fa-mobile-alt"></i>
+                                </div>
+                                <span>UPI</span>
+                            </div>
+                            
+                            <div class="method-card" data-method="cod">
+                                <div class="method-icon">
+                                    <i class="fas fa-money-bill-wave"></i>
+                                </div>
+                                <span>Cash on Delivery</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Card Payment Form -->
+                        <div class="payment-form-container active" id="cardPaymentForm">
+                            <div class="card-icons">
+                                <i class="fab fa-cc-visa"></i>
+                                <i class="fab fa-cc-mastercard"></i>
+                                <i class="fab fa-cc-amex"></i>
+                                <i class="fab fa-cc-discover"></i>
+                            </div>
+                            
+                            <div class="form-field">
+                                <label>Card Number</label>
+                                <div class="field-input">
+                                    <i class="fas fa-credit-card"></i>
+                                    <input type="text" id="cardNumber" placeholder="1234 5678 9012 3456" maxlength="19">
+                                </div>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-field">
+                                    <label>Expiry Date</label>
+                                    <div class="field-input">
+                                        <i class="fas fa-calendar"></i>
+                                        <input type="text" id="expiryDate" placeholder="MM/YY" maxlength="5">
+                                    </div>
+                                </div>
+                                
+                                <div class="form-field">
+                                    <label>CVV</label>
+                                    <div class="field-input">
+                                        <i class="fas fa-lock"></i>
+                                        <input type="password" id="cvv" placeholder="123" maxlength="3">
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-field">
+                                <label>Name on Card</label>
+                                <div class="field-input">
+                                    <i class="fas fa-user"></i>
+                                    <input type="text" id="cardName" placeholder="John Doe">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- UPI Payment Form -->
+                        <div class="payment-form-container" id="upiPaymentForm">
+                            <div class="upi-apps-grid">
+                                <div class="upi-app-card active" data-app="gpay">
+                                    <i class="fab fa-google-pay"></i>
+                                    <span>Google Pay</span>
+                                </div>
+                                <div class="upi-app-card" data-app="phonepe">
+                                    <i class="fas fa-phone"></i>
+                                    <span>PhonePe</span>
+                                </div>
+                                <div class="upi-app-card" data-app="paytm">
+                                    <i class="fas fa-wallet"></i>
+                                    <span>Paytm</span>
+                                </div>
+                            </div>
+                            
+                            <div class="form-field">
+                                <label>UPI ID</label>
+                                <div class="field-input">
+                                    <i class="fas fa-at"></i>
+                                    <input type="text" id="upiId" placeholder="username@upi">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- COD Message -->
+                        <div class="payment-form-container" id="codPaymentForm">
+                            <div class="cod-message-modern">
+                                <i class="fas fa-info-circle"></i>
+                                <div class="cod-content">
+                                    <h4>Cash on Delivery</h4>
+                                    <p>Pay when your order arrives. Please keep exact change ready.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="payment-actions-modern">
+                            <button type="button" class="btn-secondary" onclick="loadSection('details')">
+                                <i class="fas fa-arrow-left"></i> Back
+                            </button>
+                            <button class="btn-pay" id="processPaymentBtn">
+                                <span>Pay ₹<span id="payAmount">0</span></span>
+                                <i class="fas fa-lock"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 6: Order Tracking -->
+        <section id="section-tracking" class="content-section">
+            <div class="tracking-modern">
+                <div class="tracking-header">
+                    <div class="success-animation">
+                        <div class="checkmark-circle">
+                            <i class="fas fa-check"></i>
+                        </div>
+                    </div>
+                    <h2>Order Confirmed!</h2>
+                    <p class="order-id-text">Order ID: <span id="orderId">HYFUN-123456</span></p>
+                    
+                    <!-- Print Receipt Button -->
+                    <button class="btn-print-receipt" id="printReceiptBtn">
+                        <i class="fas fa-print"></i> Print Receipt
+                    </button>
+                </div>
+                
+                <div class="tracking-progress-modern">
+                    <!-- Live Map with Background -->
+                    <div class="live-tracking-map">
+                        <div class="map-background">
+                            <div class="map-grid"></div>
+                            <div class="map-streets"></div>
+                            <div class="map-buildings"></div>
+                        </div>
+                        
+                        <div class="map-container">
+                            <div class="delivery-bike">
+                                <i class="fas fa-motorcycle"></i>
+                                <div class="bike-trail"></div>
+                            </div>
+                            <div class="map-marker start">
+                                <i class="fas fa-store"></i>
+                            </div>
+                            <div class="map-marker end">
+                                <i class="fas fa-home"></i>
+                            </div>
+                            <div class="route-line" id="routeLine"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Tracking Timeline -->
+                    <div class="tracking-timeline">
+                        <div class="timeline-step active">
+                            <div class="step-dot">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div class="step-content">
+                                <h4>Order Confirmed</h4>
+                                <p>We've received your order</p>
+                                <span class="step-time" id="timeConfirmed">Just now</span>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-step">
+                            <div class="step-dot">
+                                <i class="fas fa-utensils"></i>
+                            </div>
+                            <div class="step-content">
+                                <h4>Preparing Food</h4>
+                                <p>Our chefs are cooking</p>
+                                <span class="step-time" id="timePreparing">--:--</span>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-step">
+                            <div class="step-dot">
+                                <i class="fas fa-motorcycle"></i>
+                            </div>
+                            <div class="step-content">
+                                <h4>Out for Delivery</h4>
+                                <p>Your food is on the way</p>
+                                <span class="step-time" id="timeDelivery">09:40 am</span>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-step">
+                            <div class="step-dot">
+                                <i class="fas fa-home"></i>
+                            </div>
+                            <div class="step-content">
+                                <h4>Delivered</h4>
+                                <p>Enjoy your meal!</p>
+                                <span class="step-time" id="timeDelivered">09:55 am</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Delivery Info -->
+                    <div class="delivery-info">
+                        <div class="info-item">
+                            <i class="fas fa-bicycle"></i>
+                            <div class="info-text">
+                                <span>Delivery Partner</span>
+                                <strong>Rahul - 2 mins away</strong>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-phone-alt"></i>
+                            <div class="info-text">
+                                <span>Contact</span>
+                                <strong>+91 98765 43210</strong>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Tracking Actions -->
+                    <div class="tracking-actions-modern">
+                        <button class="btn-secondary" id="trackOrderBtn">
+                            <i class="fas fa-sync-alt"></i> Track Order
+                        </button>
+                        <button class="btn-primary" onclick="loadSection('review')">
+                            Rate Experience <i class="fas fa-star"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 7: Review (ENHANCED with proper rating) -->
+        <section id="section-review" class="content-section">
+            <div class="review-modern-enhanced">
+                <!-- Decorative Elements -->
+                <div class="review-decoration">
+                    <div class="decoration-circle"></div>
+                    <div class="decoration-circle"></div>
+                    <div class="decoration-circle"></div>
+                </div>
+                
+                <div class="review-header-enhanced">
+                    <h2>Share Your <span>Experience</span></h2>
+                    <p>Your feedback helps us serve you better</p>
+                </div>
+                
+                <div class="review-card-enhanced">
+                    <!-- Rating Section with Proper Stars -->
+                    <div class="rating-section-enhanced">
+                        <div class="rating-circle-enhanced" id="ratingCircle">
+                            <div class="circle-progress">
+                                <svg width="140" height="140">
+                                    <circle cx="70" cy="70" r="64" fill="none" stroke="#E9ECEF" stroke-width="8"/>
+                                    <circle class="progress-ring-enhanced" cx="70" cy="70" r="64" fill="none" 
+                                            stroke="#78B04B" stroke-width="8" stroke-dasharray="402.123"
+                                            stroke-dashoffset="402.123" stroke-linecap="round"/>
+                                </svg>
+                                <span class="rating-number-enhanced" id="ratingNumber">0</span>
+                            </div>
+                            <div class="rating-label">Your Rating</div>
+                        </div>
+                        
+                        <!-- Rating Stars - Fixed Selection -->
+                        <div class="rating-stars-enhanced" id="ratingStars">
+                            <i class="fas fa-star" data-rating="1"></i>
+                            <i class="fas fa-star" data-rating="2"></i>
+                            <i class="fas fa-star" data-rating="3"></i>
+                            <i class="fas fa-star" data-rating="4"></i>
+                            <i class="fas fa-star" data-rating="5"></i>
+                            <div class="stars-glow"></div>
+                        </div>
+                        
+                        <!-- Rating Messages -->
+                        <div class="rating-messages" id="ratingMessages">
+                            <div class="rating-message" data-rating="1">Poor</div>
+                            <div class="rating-message" data-rating="2">Fair</div>
+                            <div class="rating-message" data-rating="3">Good</div>
+                            <div class="rating-message" data-rating="4">Very Good</div>
+                            <div class="rating-message" data-rating="5">Excellent</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Review Form -->
+                    <form id="reviewForm" class="review-form-enhanced">
+                        <div class="form-field-enhanced">
+                            <label>Review Title</label>
+                            <div class="field-input-enhanced">
+                                <i class="fas fa-heading"></i>
+                                <input type="text" id="reviewTitle" placeholder="Summarize your experience">
+                            </div>
+                        </div>
+                        
+                        <div class="form-field-enhanced">
+                            <label>Your Review</label>
+                            <div class="field-input-enhanced">
+                                <i class="fas fa-pencil-alt"></i>
+                                <textarea id="reviewText" rows="4" placeholder="Tell us more about your experience..."></textarea>
+                            </div>
+                        </div>
+                        
+                        <!-- Quick Feedback Tags -->
+                        <div class="feedback-tags">
+                            <span class="feedback-tag" data-tag="taste">😋 Delicious Taste</span>
+                            <span class="feedback-tag" data-tag="packaging">📦 Great Packaging</span>
+                            <span class="feedback-tag" data-tag="delivery">⚡ Fast Delivery</span>
+                            <span class="feedback-tag" data-tag="quantity">👍 Good Quantity</span>
+                            <span class="feedback-tag" data-tag="value">💰 Value for Money</span>
+                        </div>
+                        
+                        <div class="form-actions-enhanced">
+                            <button type="button" class="btn-secondary-enhanced" onclick="loadSection('tracking')">
+                                <i class="fas fa-arrow-left"></i> Back
+                            </button>
+                            <button type="submit" class="btn-primary-enhanced">
+                                Submit Review <i class="fas fa-paper-plane"></i>
+                                <span class="btn-shine"></span>
+                            </button>
+                        </div>
+                    </form>
+                    
+                    <!-- Review Success Message -->
+                    <div class="review-success-enhanced" id="reviewSuccess">
+                        <div class="success-animation-enhanced">
+                            <div class="checkmark-circle-enhanced">
+                                <i class="fas fa-check"></i>
+                            </div>
+                        </div>
+                        <h3>Thank You!</h3>
+                        <p>Your feedback means the world to us</p>
+                        <div class="thankyou-message">
+                            <i class="fas fa-heart"></i>
+                            <span>You're awesome!</span>
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <button class="btn-home-enhanced" onclick="window.location.href='index.html'">
+                            <i class="fas fa-home"></i> Back to Home
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modern Cart Sidebar (FIXED - Shows products properly) -->
+    <div class="cart-sidebar-modern" id="cartSidebar">
+        <div class="cart-sidebar-header">
+            <h3>Your Cart</h3>
+            <button class="close-cart" id="closeCart">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        
+        <div class="cart-items-list" id="cartItemsList">
+            <div class="empty-cart" id="emptyCart">
+                <i class="fas fa-shopping-bag"></i>
+                <p>Your cart is empty</p>
+                <button class="btn-secondary" onclick="loadSection('products'); toggleCart()">
+                    Browse Menu
+                </button>
+            </div>
+        </div>
+        
+        <div class="cart-sidebar-footer">
+            <div class="cart-total-modern">
+                <span>Total</span>
+                <span class="total-amount" id="sidebarTotal">₹0</span>
+            </div>
+            <button class="btn-checkout-modern" id="checkoutBtn" disabled>
+                Checkout <i class="fas fa-arrow-right"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Product Quick View Modal -->
+    <div class="modal-modern" id="productModal">
+        <div class="modal-content-modern">
+            <button class="modal-close-btn" id="closeModal">
+                <i class="fas fa-times"></i>
+            </button>
+            <div id="modalProductContent"></div>
+        </div>
+    </div>
+
+    <!-- Loading Overlay -->
+    <div class="loading-overlay-modern" id="loadingOverlay">
+        <div class="loading-spinner-modern">
+            <div class="spinner-ring"></div>
+            <div class="spinner-ring"></div>
+            <div class="spinner-ring"></div>
+            <i class="fas fa-utensils"></i>
+        </div>
+        <p>Processing your order...</p>
+    </div>
+
+    <!-- Notification Container -->
+    <div id="notificationContainer"></div>
+
+    <!-- Hidden Print Frame for Receipt -->
+    <iframe id="printFrame" style="display: none;"></iframe>
+
+<?php get_footer(); ?>
