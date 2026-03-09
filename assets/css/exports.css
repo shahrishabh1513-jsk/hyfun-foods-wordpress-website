@@ -1,0 +1,1411 @@
+/* EXPORTS PAGE STYLES - SCOPED WITH exports- PREFIX */
+
+/* NEW: Redesigned Hero Section */
+.exports-page-hero.exports-section-bg {
+    padding: 180px 0 100px;
+    margin-top: var(--header-height);
+    background: linear-gradient(135deg, rgba(8, 42, 95, 0.95), rgba(13, 71, 161, 0.95));
+    position: relative;
+    overflow: hidden;
+}
+
+.exports-bg-pattern.exports-bg-pattern-world {
+    background-image: url('https://images.unsplash.com/photo-1483728642387-6c3bdd6c93e5?q=80&w=2076&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.1;
+}
+
+.exports-hero-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+.exports-hero-text .exports-hero-breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 30px;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.9rem;
+}
+
+.exports-hero-breadcrumb a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.exports-hero-breadcrumb a:hover {
+    color: var(--green);
+}
+
+.exports-hero-breadcrumb .exports-active {
+    color: var(--green);
+    font-weight: 600;
+}
+
+.exports-page-hero h1 {
+    font-size: 3.2rem;
+    margin-bottom: 20px;
+    color: white;
+    line-height: 1.2;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.exports-hero-subtitle {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 40px;
+    line-height: 1.6;
+}
+
+.exports-hero-highlights {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.exports-highlight-item {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    padding: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: var(--transition);
+}
+
+.exports-highlight-item:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-5px);
+    border-color: var(--green);
+}
+
+.exports-highlight-icon {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, var(--green), var(--blue));
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.exports-highlight-content h3 {
+    font-size: 1.3rem;
+    color: white;
+    margin-bottom: 5px;
+}
+
+.exports-highlight-content p {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.9rem;
+}
+
+.exports-hero-cta {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.exports-btn.exports-btn-export {
+    background: linear-gradient(135deg, var(--green), var(--blue));
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 16px 32px;
+}
+
+.exports-btn.exports-btn-export:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(110, 193, 228, 0.5);
+}
+
+.exports-btn.exports-btn-outline {
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 16px 32px;
+}
+
+.exports-btn.exports-btn-outline:hover {
+    background: white;
+    color: var(--text-main);
+}
+
+/* World Map Visualization */
+.exports-world-map-container {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    overflow: hidden;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.exports-world-map {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/8/83/Equirectangular_projection_SW.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.8;
+}
+
+.exports-map-point {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background: var(--green);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    transition: var(--transition);
+    z-index: 2;
+}
+
+.exports-map-point::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--green);
+    border-radius: 50%;
+    animation: exports-pulse 2s infinite;
+}
+
+.exports-pulse-ring {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30px;
+    height: 30px;
+    border: 2px solid var(--green);
+    border-radius: 50%;
+    animation: exports-pulse-ring 2s infinite;
+}
+
+.exports-map-india {
+    top: 45%;
+    left: 73%;
+    background: var(--green);
+}
+
+.exports-map-uae {
+    top: 40%;
+    left: 68%;
+    background: var(--blue);
+}
+
+.exports-map-usa {
+    top: 40%;
+    left: 25%;
+    background: var(--blue);
+}
+
+.exports-map-uk {
+    top: 30%;
+    left: 48%;
+    background: var(--blue);
+}
+
+.exports-map-saudi {
+    top: 42%;
+    left: 65%;
+    background: var(--blue);
+}
+
+.exports-map-australia {
+    top: 75%;
+    left: 88%;
+    background: var(--blue);
+}
+
+.exports-map-germany {
+    top: 35%;
+    left: 52%;
+    background: var(--blue);
+}
+
+.exports-point-label {
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 4px 12px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    white-space: nowrap;
+    opacity: 0;
+    transition: var(--transition);
+}
+
+.exports-map-point:hover .exports-point-label {
+    opacity: 1;
+    top: -40px;
+}
+
+.exports-connection-line {
+    position: absolute;
+    background: linear-gradient(90deg, var(--green), transparent);
+    height: 2px;
+    transform-origin: 0 0;
+    z-index: 1;
+    opacity: 0.6;
+}
+
+.exports-line-india-uae {
+    top: 45%;
+    left: 73%;
+    width: 100px;
+    transform: rotate(-30deg);
+}
+
+.exports-line-india-usa {
+    top: 45%;
+    left: 73%;
+    width: 400px;
+    transform: rotate(-80deg);
+}
+
+.exports-line-india-uk {
+    top: 45%;
+    left: 73%;
+    width: 250px;
+    transform: rotate(-55deg);
+}
+
+.exports-line-india-saudi {
+    top: 45%;
+    left: 73%;
+    width: 80px;
+    transform: rotate(-40deg);
+}
+
+.exports-line-india-australia {
+    top: 45%;
+    left: 73%;
+    width: 300px;
+    transform: rotate(120deg);
+}
+
+.exports-line-india-germany {
+    top: 45%;
+    left: 73%;
+    width: 200px;
+    transform: rotate(-50deg);
+}
+
+.exports-floating-ship, .exports-floating-plane {
+    position: absolute;
+    font-size: 2rem;
+    color: white;
+    animation: exports-float-across 15s linear infinite;
+    z-index: 3;
+}
+
+.exports-floating-ship {
+    bottom: 20px;
+    left: -50px;
+    animation-delay: 0s;
+}
+
+.exports-floating-plane {
+    top: 30px;
+    right: -50px;
+    animation-delay: 7.5s;
+}
+
+@keyframes exports-float-across {
+    0% {
+        transform: translateX(-100px);
+    }
+    100% {
+        transform: translateX(calc(100vw + 100px));
+    }
+}
+
+@keyframes exports-pulse-ring {
+    0% {
+        width: 30px;
+        height: 30px;
+        opacity: 1;
+    }
+    100% {
+        width: 60px;
+        height: 60px;
+        opacity: 0;
+    }
+}
+
+/* Global Presence Section */
+.exports-continents-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.exports-continent-card {
+    background-color: var(--bg-card);
+    border-radius: var(--border-radius);
+    padding: 30px;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    border-top: 4px solid var(--green);
+}
+
+.exports-continent-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.exports-continent-icon {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, var(--green), var(--blue));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    color: white;
+    font-size: 2rem;
+}
+
+.exports-continent-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    color: var(--text-main);
+}
+
+.exports-country-list {
+    list-style: none;
+}
+
+.exports-country-list li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+.exports-country-list li i {
+    color: var(--green);
+    font-size: 0.9rem;
+}
+
+/* NEW: Enhanced Interactive Map */
+.exports-map-enhanced {
+    background-color: var(--bg-card);
+    border-radius: var(--border-radius);
+    padding: 40px;
+    box-shadow: var(--shadow);
+    margin-top: 50px;
+}
+
+.exports-map-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.exports-map-header h3 {
+    font-size: 1.8rem;
+    color: var(--text-main);
+    margin-bottom: 10px;
+}
+
+.exports-map-header p {
+    color: var(--text-muted);
+}
+
+.exports-world-map-interactive {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    background: linear-gradient(135deg, #e8f4f8 0%, #d4e7f0 100%);
+    border-radius: 10px;
+    overflow: hidden;
+    border: 2px solid rgba(110, 193, 228, 0.3);
+}
+
+.exports-map-region {
+    position: absolute;
+    border: 1px solid rgba(110, 193, 228, 0.5);
+    border-radius: 8px;
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.exports-map-region:hover {
+    background: rgba(110, 193, 228, 0.1);
+}
+
+.exports-region-label {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--text-main);
+    font-weight: 600;
+    font-size: 0.9rem;
+    opacity: 0.7;
+}
+
+.exports-region-asia {
+    top: 25%;
+    left: 70%;
+    width: 25%;
+    height: 30%;
+}
+
+.exports-region-europe {
+    top: 20%;
+    left: 50%;
+    width: 20%;
+    height: 25%;
+}
+
+.exports-region-americas {
+    top: 30%;
+    left: 15%;
+    width: 25%;
+    height: 40%;
+}
+
+.exports-region-africa {
+    top: 40%;
+    left: 55%;
+    width: 15%;
+    height: 30%;
+}
+
+.exports-region-oceania {
+    top: 65%;
+    left: 85%;
+    width: 15%;
+    height: 20%;
+}
+
+.exports-country-dot {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: var(--blue);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    transition: var(--transition);
+    z-index: 2;
+}
+
+.exports-country-dot:hover {
+    transform: translate(-50%, -50%) scale(1.5);
+    background: var(--green);
+}
+
+.exports-country-dot::after {
+    content: attr(data-country);
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--text-main);
+    color: white;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    white-space: nowrap;
+    opacity: 0;
+    transition: var(--transition);
+}
+
+.exports-country-dot:hover::after {
+    opacity: 1;
+    top: -40px;
+}
+
+.exports-dot-india {
+    top: 45%;
+    left: 73%;
+    background: var(--green);
+    width: 15px;
+    height: 15px;
+}
+
+.exports-dot-uae {
+    top: 40%;
+    left: 68%;
+}
+
+.exports-dot-usa {
+    top: 40%;
+    left: 25%;
+}
+
+.exports-dot-uk {
+    top: 30%;
+    left: 48%;
+}
+
+.exports-dot-saudi {
+    top: 42%;
+    left: 65%;
+}
+
+.exports-dot-australia {
+    top: 75%;
+    left: 88%;
+}
+
+.exports-dot-germany {
+    top: 35%;
+    left: 52%;
+}
+
+.exports-map-connection {
+    position: absolute;
+    background: linear-gradient(90deg, var(--green), transparent);
+    height: 2px;
+    transform-origin: 0 0;
+    z-index: 1;
+    opacity: 0.3;
+}
+
+.exports-conn-india-uae {
+    top: 45%;
+    left: 73%;
+    width: 100px;
+    transform: rotate(-30deg);
+}
+
+.exports-conn-india-usa {
+    top: 45%;
+    left: 73%;
+    width: 400px;
+    transform: rotate(-80deg);
+}
+
+.exports-map-info-panel {
+    margin-top: 30px;
+    padding: 25px;
+    background: linear-gradient(135deg, rgba(120, 176, 75, 0.1), rgba(110, 193, 228, 0.1));
+    border-radius: var(--border-radius);
+    border: 2px solid rgba(120, 176, 75, 0.2);
+}
+
+.exports-map-info-panel h4 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    color: var(--text-main);
+}
+
+.exports-info-content {
+    margin-bottom: 20px;
+    min-height: 60px;
+}
+
+.exports-info-content p {
+    color: var(--text-muted);
+}
+
+.exports-export-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    text-align: center;
+}
+
+.exports-export-stats .exports-stat h5 {
+    font-size: 2rem;
+    color: var(--green);
+    margin-bottom: 5px;
+}
+
+.exports-export-stats .exports-stat p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+/* Quality Standards Section */
+.exports-standards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.exports-standard-card {
+    background-color: var(--bg-card);
+    border-radius: var(--border-radius);
+    padding: 30px;
+    text-align: center;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.exports-standard-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.exports-standard-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, var(--green), var(--blue));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    color: white;
+    font-size: 2rem;
+}
+
+.exports-standard-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    color: var(--text-main);
+}
+
+.exports-standard-card p {
+    color: var(--text-muted);
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.exports-standard-tag {
+    display: inline-block;
+    padding: 5px 15px;
+    background: rgba(120, 176, 75, 0.1);
+    color: var(--green);
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+/* UPDATED: Certifications with Images */
+.exports-certifications-showcase {
+    text-align: center;
+    padding: 40px;
+    background: linear-gradient(135deg, rgba(120, 176, 75, 0.1), rgba(110, 193, 228, 0.1));
+    border-radius: var(--border-radius);
+    border: 2px solid rgba(120, 176, 75, 0.2);
+}
+
+.exports-certifications-showcase h3 {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+    color: var(--text-main);
+}
+
+.exports-certification-logos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    margin-bottom: 20px;
+}
+
+.exports-cert-logo {
+    background: white;
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: var(--transition);
+    text-align: center;
+    width: 150px;
+}
+
+.exports-cert-logo:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.exports-cert-logo img {
+    width: 100px;
+    height: 60px;
+    object-fit: contain;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.exports-cert-logo span {
+    display: block;
+    font-weight: 600;
+    color: var(--green);
+    font-size: 0.9rem;
+}
+
+.exports-certification-note {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    max-width: 600px;
+    margin: 20px auto 0;
+    line-height: 1.6;
+}
+
+/* Export Logistics Section */
+.exports-logistics-process {
+    max-width: 900px;
+    margin: 50px auto;
+}
+
+.exports-process-step {
+    display: flex;
+    align-items: center;
+    background-color: var(--bg-card);
+    border-radius: var(--border-radius);
+    padding: 25px 30px;
+    margin-bottom: 20px;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    position: relative;
+}
+
+.exports-process-step:hover {
+    transform: translateX(10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.exports-step-number {
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: rgba(110, 193, 228, 0.2);
+    margin-right: 30px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.exports-step-content {
+    flex: 1;
+}
+
+.exports-step-content h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: var(--text-main);
+}
+
+.exports-step-content p {
+    color: var(--text-muted);
+}
+
+.exports-step-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, var(--green), var(--blue));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.exports-shipping-options {
+    margin-top: 60px;
+}
+
+.exports-shipping-options h3 {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 40px;
+    color: var(--text-main);
+}
+
+.exports-shipping-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+}
+
+.exports-shipping-method {
+    background-color: var(--bg-card);
+    border-radius: var(--border-radius);
+    padding: 30px 20px;
+    text-align: center;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.exports-shipping-method:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.exports-shipping-method i {
+    font-size: 3rem;
+    color: var(--green);
+    margin-bottom: 20px;
+}
+
+.exports-shipping-method h4 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: var(--text-main);
+}
+
+.exports-shipping-method p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+/* Export Enquiry Form Styles */
+.exports-export-enquiry.exports-section-bg {
+    padding: 100px 0;
+}
+
+.exports-enquiry-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: start;
+}
+
+.exports-enquiry-info h3 {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+    color: var(--text-main);
+}
+
+.exports-benefits-list {
+    margin-bottom: 40px;
+}
+
+.exports-benefit {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+    align-items: flex-start;
+}
+
+.exports-benefit i {
+    color: var(--green);
+    font-size: 1.2rem;
+    margin-top: 5px;
+}
+
+.exports-benefit h4 {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+    color: var(--text-main);
+}
+
+.exports-benefit p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+.exports-export-contacts {
+    background: linear-gradient(135deg, rgba(120, 176, 75, 0.1), rgba(110, 193, 228, 0.1));
+    padding: 25px;
+    border-radius: var(--border-radius);
+    border: 2px solid rgba(120, 176, 75, 0.2);
+    margin-bottom: 30px;
+}
+
+.exports-export-contacts h4 {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    color: var(--text-main);
+}
+
+.exports-contact-item {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+    align-items: flex-start;
+}
+
+.exports-contact-item i {
+    color: var(--green);
+    font-size: 1.2rem;
+    width: 20px;
+    margin-top: 3px;
+}
+
+.exports-contact-item strong {
+    display: block;
+    color: var(--text-main);
+    margin-bottom: 2px;
+    font-size: 0.95rem;
+}
+
+.exports-contact-item p {
+    color: var(--text-muted);
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+/* Enhanced Enquiry Form */
+.exports-enquiry-form-container {
+    background-color: var(--bg-card);
+    border-radius: var(--border-radius);
+    padding: 40px;
+    box-shadow: var(--shadow);
+    position: sticky;
+    top: 120px;
+}
+
+.exports-enquiry-form h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: var(--text-main);
+}
+
+.exports-form-group {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.exports-form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: var(--text-main);
+    font-size: 0.95rem;
+}
+
+.exports-form-group input,
+.exports-form-group select,
+.exports-form-group textarea {
+    width: 100%;
+    padding: 14px 16px;
+    border: 2px solid rgba(110, 193, 228, 0.2);
+    border-radius: 10px;
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.95rem;
+    transition: var(--transition);
+}
+
+.exports-form-group input:focus,
+.exports-form-group select:focus,
+.exports-form-group textarea:focus {
+    outline: none;
+    border-color: var(--green);
+    box-shadow: 0 0 0 3px rgba(120, 176, 75, 0.1);
+}
+
+.exports-form-group textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.exports-form-hint {
+    display: block;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    margin-top: 5px;
+}
+
+.exports-btn.exports-btn-submit {
+    width: 100%;
+    padding: 16px;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: linear-gradient(135deg, var(--green), var(--blue));
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.exports-btn.exports-btn-submit:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(110, 193, 228, 0.3);
+}
+
+.exports-btn.exports-btn-submit:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    transform: none !important;
+    box-shadow: none !important;
+}
+
+.exports-form-note {
+    text-align: center;
+    margin-top: 25px;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 15px;
+    background: rgba(110, 193, 228, 0.05);
+    border-radius: 8px;
+}
+
+.exports-form-note i {
+    color: var(--green);
+    font-size: 1.2rem;
+}
+
+/* Success Modal */
+.exports-success-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    padding: 20px;
+    animation: exports-fade-in 0.3s ease;
+}
+
+.exports-success-modal {
+    background: white;
+    padding: 50px 40px;
+    border-radius: var(--border-radius);
+    max-width: 500px;
+    width: 90%;
+    text-align: center;
+    animation: exports-slide-up 0.3s ease;
+}
+
+.exports-success-icon {
+    font-size: 4rem;
+    color: var(--green);
+    margin-bottom: 25px;
+}
+
+.exports-success-modal h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: var(--text-main);
+}
+
+.exports-success-modal p {
+    color: var(--text-muted);
+    margin-bottom: 30px;
+    line-height: 1.6;
+    font-size: 1.05rem;
+}
+
+.exports-btn-close-modal {
+    background: var(--green);
+    color: white;
+    border: none;
+    padding: 14px 40px;
+    border-radius: 25px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    font-size: 1rem;
+}
+
+.exports-btn-close-modal:hover {
+    background: var(--blue);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(110, 193, 228, 0.3);
+}
+
+@keyframes exports-fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes exports-slide-up {
+    from { transform: translateY(30px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+/* Loading Animation */
+.exports-loading-spinner {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: white;
+    animation: exports-spin 1s ease-in-out infinite;
+}
+
+@keyframes exports-spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Toast Notifications */
+.exports-toast-notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: white;
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    z-index: 10000;
+    animation: exports-slide-in 0.3s ease;
+    max-width: 400px;
+    border-left: 4px solid var(--green);
+}
+
+@keyframes exports-slide-in {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Section Titles */
+.exports-section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.exports-section-title h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: var(--text-main);
+}
+
+.exports-section-title p {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto 20px;
+    line-height: 1.6;
+}
+
+.exports-title-accent {
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(to right, var(--green), var(--blue));
+    margin: 0 auto;
+    border-radius: 2px;
+}
+
+/* Section Background */
+.exports-section-bg {
+    position: relative;
+    padding: 100px 0;
+}
+
+.exports-section-bg .exports-bg-pattern {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.05;
+    z-index: 0;
+}
+
+.exports-bg-pattern-2 {
+    background: radial-gradient(circle at 30% 50%, rgba(110, 193, 228, 0.1), transparent 50%),
+                radial-gradient(circle at 70% 20%, rgba(120, 176, 75, 0.1), transparent 50%);
+}
+
+.exports-bg-pattern-3 {
+    background: radial-gradient(circle at 20% 80%, rgba(110, 193, 228, 0.1), transparent 50%),
+                radial-gradient(circle at 80% 30%, rgba(120, 176, 75, 0.1), transparent 50%);
+}
+
+/* Responsive Design for Exports Page */
+@media (max-width: 1200px) {
+    .exports-page-hero h1 {
+        font-size: 2.8rem;
+    }
+    
+    .exports-hero-highlights {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .exports-enquiry-content {
+        gap: 40px;
+    }
+}
+
+@media (max-width: 992px) {
+    .exports-hero-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .exports-world-map-container {
+        height: 400px;
+    }
+    
+    .exports-enquiry-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .exports-enquiry-form-container {
+        position: static;
+    }
+    
+    .exports-standards-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .exports-page-hero.exports-section-bg {
+        padding: 150px 0 80px;
+    }
+    
+    .exports-page-hero h1 {
+        font-size: 2.3rem;
+    }
+    
+    .exports-hero-highlights {
+        grid-template-columns: 1fr;
+    }
+    
+    .exports-hero-cta {
+        flex-direction: column;
+    }
+    
+    .exports-btn.exports-btn-export,
+    .exports-btn.exports-btn-outline {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .exports-world-map-container {
+        height: 300px;
+    }
+    
+    .exports-floating-ship,
+    .exports-floating-plane {
+        font-size: 1.5rem;
+    }
+    
+    .exports-process-step {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+    
+    .exports-step-number {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+    
+    .exports-step-icon {
+        margin-top: 10px;
+    }
+    
+    .exports-shipping-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .exports-map-enhanced {
+        padding: 25px;
+    }
+    
+    .exports-world-map-interactive {
+        height: 300px;
+    }
+    
+    .exports-export-stats {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .exports-enquiry-form-container {
+        padding: 30px 25px;
+    }
+    
+    .exports-form-note {
+        flex-direction: column;
+        text-align: center;
+        gap: 5px;
+    }
+}
+
+@media (max-width: 576px) {
+    .exports-page-hero h1 {
+        font-size: 1.8rem;
+    }
+    
+    .exports-hero-subtitle {
+        font-size: 1rem;
+    }
+    
+    .exports-world-map-container {
+        height: 250px;
+    }
+    
+    .exports-continents-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .exports-standards-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .exports-enquiry-form-container {
+        padding: 25px 20px;
+    }
+    
+    .exports-export-contacts {
+        padding: 20px;
+    }
+    
+    .exports-certification-logos {
+        gap: 15px;
+    }
+    
+    .exports-cert-logo {
+        width: 120px;
+        padding: 10px;
+    }
+    
+    .exports-cert-logo img {
+        width: 80px;
+        height: 50px;
+    }
+    
+    .exports-export-stats {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .exports-export-stats .exports-stat h5 {
+        font-size: 1.5rem;
+    }
+}

@@ -37,7 +37,7 @@ get_header(); ?>
             <div class="hero-image">
                 <div class="timeline-hero-container">
                     <div class="hero-timeline-line"></div>
-                    <img src="/image/about/hyfun.jpeg" alt="HyFun Legacy" class="timeline-hero-img">
+                    <img src="<?php echo get_template_directory_uri(); ?>/image/about/hyfun.jpeg" alt="HyFun Legacy" class="timeline-hero-img">
                 </div>
             </div>
         </div>
@@ -91,7 +91,7 @@ get_header(); ?>
         <div class="container">
             <div class="legacy-content-wrapper">
                 <div class="legacy-image">
-                    <img src="/image/about/allproducts.png" alt="HyFun Legacy" class="legacy-img">
+                    <img src="<?php echo get_template_directory_uri(); ?>/image/about/allproducts.png" alt="HyFun Legacy" class="legacy-img">
                     <div class="image-badge">
                         <i class="fas fa-award"></i>
                         <span>Make in India Initiative</span>

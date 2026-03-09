@@ -11,13 +11,14 @@
         rel="stylesheet">
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/style.css">
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/responsive.css">
-    <link rel="stylesheet" href="/hy_fun/wp-content/themes/hy_theme/assets/css/connect.css">
-    <link rel="stylesheet" href="/hy_fun/wp-content/themes/hy_theme/assets/css/culture.css">
-    <link rel="stylesheet" href="/hy_fun/wp-content/themes/hy_theme/assets/css/exports.css">
-    <link rel="stylesheet" href="/hy_fun/wp-content/themes/hy_theme/assets/css/products.css">
-    <link rel="stylesheet" href="/hy_fun/wp-content/themes/hy_theme/assets/css/recipes.css">
-    <link rel="stylesheet" href="/hy_fun/wp-content/themes/hy_theme/assets/css/seedtoshelf.css">
-    <link rel="icon" type="image/x-icon" href="/hy_fun/wp-content/themes/hy_theme/assets/image/Rweblogo.png">
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/connect.css">
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/culture.css">
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/exports.css">
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/products.css">
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/recipes.css">
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/seedtoshelf.css">
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/order.css">
+    <link rel="icon" type="image/x-icon" href="<?php echo get_template_directory_uri(); ?>/image/Rweblogo.png">
 </head>
 
 <body>
@@ -33,8 +34,8 @@
     <div class="mobile-menu-content" id="mobileMenuContent">
         <div class="mobile-menu-header">
             <div class="logo">
-                <a href="index.php">
-                    <img src="/hy_fun/wp-content/themes/hy_theme/assets/image/hyfun_logo.png" alt="HyFun Foods Logo" class="logo-image">
+                <a href="<?php echo home_url('/'); ?>">
+                    <img src="<?php echo get_template_directory_uri(); ?>/image/hyfun_logo.png" alt="HyFun Foods Logo" class="logo-image">
                 </a>
             </div>
             <button class="close-menu-btn" id="closeMenuBtn">
@@ -43,25 +44,27 @@
         </div>
         <nav class="mobile-nav">
             <ul>
-                <li><a href="index.php" class="mobile-nav-link">Home</a></li>
+                <li><a href="<?php echo home_url('/'); ?>" class="mobile-nav-link">Home</a></li>
                 <li class="mobile-dropdown">
-                    <a href="about.php" class="mobile-nav-link">About Us <i class="fas fa-chevron-down"></i></a>
+                    <a href="<?php echo home_url('/about'); ?>" class="mobile-nav-link">About Us <i class="fas fa-chevron-down"></i></a>
                     <div class="mobile-dropdown-content">
-                        <a href="culture.php">Our Culture</a>                    </div>
+                        <a href="<?php echo home_url('/culture'); ?>">Our Culture</a>
+                    </div>
                 </li>
                 <li class="mobile-dropdown">
-                    <a href="products.php" class="mobile-nav-link">Products <i class="fas fa-chevron-down"></i></a>
+                    <a href="<?php echo home_url('/products'); ?>" class="mobile-nav-link">Products <i class="fas fa-chevron-down"></i></a>
                     <div class="mobile-dropdown-content">
                         <a href="#french-fries">French Fries</a>
                         <a href="#xlf-fries">XLF Fries</a>
                         <a href="#crinkle-fries">Crinkle Fries</a>
-                        <a href="#skin-on-fries">Skin on Fries</a>                    </div>
+                        <a href="#skin-on-fries">Skin on Fries</a>                    
+                    </div>
                 </li>
-                <li><a href="seedtoshelf.php" class="mobile-nav-link">Seed to Shelf</a></li>
-                <li><a href="Exports.php" class="mobile-nav-link">Exports</a></li>
-                <li><a href="Recipes.php" class="mobile-nav-link">Recipes</a></li>
-                <li><a href="order.php" class="mobile-nav-link">Order Now😋</a></li>
-                <li><a href="connect.php" class="mobile-nav-link">Connect</a></li>
+                <li><a href="<?php echo home_url('/seedtoshelf'); ?>" class="mobile-nav-link">Seed to Shelf</a></li>
+                <li><a href="<?php echo home_url('/exports'); ?>" class="mobile-nav-link">Exports</a></li>
+                <li><a href="<?php echo home_url('/recipes'); ?>" class="mobile-nav-link">Recipes</a></li>
+                <li><a href="<?php echo home_url('/order'); ?>" class="mobile-nav-link">Order Now 😋</a></li>
+                <li><a href="<?php echo home_url('/connect'); ?>" class="mobile-nav-link">Connect</a></li>
             </ul>
         </nav>
     </div>
@@ -70,31 +73,33 @@
     <header>
         <div class="container header-container">
             <div class="logo">
-                <a href="index.php">
-                    <img src="/hy_fun/wp-content/themes/hy_theme/assets/image/hyfun_logo.png" alt="HyFun Foods Logo" class="logo-image">
+                <a href="<?php echo home_url('/'); ?>">
+                    <img src="<?php echo get_template_directory_uri(); ?>/image/hyfun_logo.png" alt="HyFun Foods Logo" class="logo-image">
                 </a>
             </div>
             <nav class="desktop-nav">
                 <ul>
-                    <li><a href="index.php">Home</a></li>
+                    <li><a href="<?php echo home_url('/'); ?>">Home</a></li>
                     <li class="dropdown">
-                        <a href="about.php">About Us <i class="fas fa-chevron-down"></i></a>
+                        <a href="<?php echo home_url('/about'); ?>">About Us <i class="fas fa-chevron-down"></i></a>
                         <div class="dropdown-content">
-                            <a href="culture.php">Our Culture</a>                        </div>
+                            <a href="<?php echo home_url('/culture'); ?>">Our Culture</a>
+                    </div>
                   </li>
                     <li class="dropdown">
-                        <a href="products.php">Products <i class="fas fa-chevron-down"></i></a>
+                        <a href="<?php echo home_url('/products'); ?>">Products <i class="fas fa-chevron-down"></i>
+                    </a>
                         <div class="dropdown-content">
                             <a href="#french-fries">French Fries</a>
                             <a href="#xlf-fries">XLF Fries</a>
                             <a href="#crinkle-fries">Crinkle Fries</a>
                             <a href="#skin-on-fries">Skin on Fries</a>                        </div>
                   </li>
-                    <li><a href="seedtoshelf.php">Seed to Shelf</a></li>
-                    <li><a href="Exports.php">Exports</a></li>
-                    <li><a href="Recipes.php">Recipes</a></li>
-                    <li><a href="order.php">Order Now😋</a></li>
-                    <li><a href="connect.php">Connect</a></li>
+                    <li><a href="<?php echo home_url('/seedtoshelf'); ?>">Seed to Shelf</a></li>
+                    <li><a href="<?php echo home_url('/exports'); ?>">Exports</a></li>
+                    <li><a href="<?php echo home_url('/recipes'); ?>">Recipes</a></li>
+                    <li><a href="<?php echo home_url('/order'); ?>">Order Now 😋</a></li>
+                    <li><a href="<?php echo home_url('/connect'); ?>">Connect</a></li>
                 </ul>
             </nav>
 

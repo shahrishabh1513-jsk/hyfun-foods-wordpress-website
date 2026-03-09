@@ -13,15 +13,15 @@
                 <div class="footer-column">
                     <h3>Quick Links</h3>
                     <ul>
-                        <li><a href="index.php">Home</a></li>
-                        <li><a href="about.php">About Us</a></li>
-                        <li><a href="seedtoshelf.php">seed to shelf</a></li>
-                        <li><a href="products.php">Products</a></li>
-                        <li><a href="Exports.php">Exports</a></li>
-                        <li><a href="Recipes.php">Recipes</a></li>
-                        <li><a href="order.php">Order Now😋</a></li>
-                        <li><a href="connect.php">Connect With Us</a></li>
-                        <li><a href="culture.php">Our Culture</a></li>
+                        <li><a href="<?php echo home_url('/'); ?>">Home</a></li>
+                        <li><a href="<?php echo home_url('/about'); ?>">About Us</a></li>
+                        <li><a href="<?php echo home_url('/seedtoshelf'); ?>">Seed to Shelf</a></li>
+                        <li><a href="<?php echo home_url('/products'); ?>">Products</a></li>
+                        <li><a href="<?php echo home_url('/exports'); ?>">Exports</a></li>
+                        <li><a href="<?php echo home_url('/recipes'); ?>">Recipes</a></li>
+                        <li><a href="<?php echo home_url('/order'); ?>">Order Now 😋</a></li>
+                        <li><a href="<?php echo home_url('/connect'); ?>">Connect With Us</a></li>
+                        <li><a href="<?php echo home_url('/culture'); ?>">Our Culture</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
@@ -54,16 +54,16 @@
         </div>
     </footer>
 
-    <script src="/hy_fun/wp-content/themes/hy_theme/assets/js/script.js"></script>
-    <script src="/hy_fun/wp-content/themes/hy_theme/assets/js/mobile-menu.js"></script>
-    <script src="/hy_fun/wp-content/themes/hy_theme/assets/js/connect.js"></script>
-    <script src="/hy_fun/wp-content/themes/hy_theme/assets/js/culture.js"></script>
-    <script src="/hy_fun/wp-content/themes/hy_theme/assets/js/exports.js"></script>
-    <script src="/hy_fun/wp-content/themes/hy_theme/assets/js/order.js"></script>
-    <script src="/hy_fun/wp-content/themes/hy_theme/assets/js/products.js"></script>
-    <script src="/hy_fun/wp-content/themes/hy_theme/assets/js/recipes.js"></script>
-    <script src="/hy_fun/wp-content/themes/hy_theme/assets/js/about.js"></script>
-    <script src="/hy_fun/wp-content/themes/hy_theme/assets/js/seedtoshelf.js"></script>
+    <script src="<?php echo get_template_directory_uri(); ?>/assets/js/script.js"></script>
+    <script src="<?php echo get_template_directory_uri(); ?>/assets/js/mobile-menu.js"></script>
+    <script src="<?php echo get_template_directory_uri(); ?>/assets/js/connect.js"></script>
+    <script src="<?php echo get_template_directory_uri(); ?>/assets/js/culture.js"></script>
+    <script src="<?php echo get_template_directory_uri(); ?>/assets/js/exports.js"></script>
+    <script src="<?php echo get_template_directory_uri(); ?>/assets/js/order.js"></script>
+    <script src="<?php echo get_template_directory_uri(); ?>/assets/js/products.js"></script>
+    <script src="<?php echo get_template_directory_uri(); ?>/assets/js/recipes.js"></script>
+    <script src="<?php echo get_template_directory_uri(); ?>/assets/js/about.js"></script>
+    <script src="<?php echo get_template_directory_uri(); ?>/assets/js/seedtoshelf.js"></script>
 </body>
 
 </html>
